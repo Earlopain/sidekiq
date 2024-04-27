@@ -6,17 +6,17 @@ module Sidekiq
 
     REDIS_KEYS = %w[redis_version uptime_in_days connected_clients used_memory_human used_memory_peak_human]
     CSP_HEADER = [
-      "default-src 'self' https: http:",
+      "default-src 'self'",
       "child-src 'self'",
-      "connect-src 'self' https: http: wss: ws:",
-      "font-src 'self' https: http:",
+      "connect-src 'self' wss: ws:",
+      "font-src 'self'",
       "frame-src 'self'",
-      "img-src 'self' https: http: data:",
+      "img-src 'self' data:",
       "manifest-src 'self'",
       "media-src 'self'",
       "object-src 'none'",
-      "script-src 'self' https: http:",
-      "style-src 'self' https: http: 'unsafe-inline'",
+      "script-src 'self'",
+      "style-src 'self' 'unsafe-inline'",
       "worker-src 'self'",
       "base-uri 'self'"
     ].join("; ").freeze
